@@ -45,6 +45,7 @@ public class PlayerController {
     }
 
     @PostMapping
+    @CrossOrigin(origins = "http://localhost:9000")
     public ResponseEntity<?> createPlayer(@RequestBody CreatePlayerRequest playerRequest){
         PlayerResponse playerResponse = playerService.save(playerRequest);
         URI location = ServletUriComponentsBuilder

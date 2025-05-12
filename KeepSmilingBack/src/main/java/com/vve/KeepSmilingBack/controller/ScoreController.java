@@ -47,6 +47,7 @@ public class ScoreController {
     }
 
     @PostMapping
+    @CrossOrigin(origins = "http://localhost:9000")
     public ResponseEntity<?> createScore(@Valid @RequestBody CreateScoreRequest scoreRequest){
         try {
             ScoreResponse scoreResponse = scoreService.save(scoreRequest);
