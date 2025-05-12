@@ -1,0 +1,12 @@
+version: "3"
+services:
+  keep_smiling_back:
+    container_name: keep-smiling-back
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - DB_URL=jdbc:mysql://crm.congressrental.com:3306/keepsmiling?createDatabaseIfNotExist=true&serverTimezone=UTC
+      - DB_USER=root
+      - DB_PASSWORD=R55Gt9Bf
+    restart: always
