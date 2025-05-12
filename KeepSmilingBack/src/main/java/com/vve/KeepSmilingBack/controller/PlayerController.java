@@ -48,6 +48,7 @@ public class PlayerController {
     @CrossOrigin(origins = "http://localhost:9000")
     public ResponseEntity<?> createPlayer(@RequestBody CreatePlayerRequest playerRequest){
         PlayerResponse playerResponse = playerService.save(playerRequest);
+        System.out.println("agregue player");
         URI location = ServletUriComponentsBuilder
                 .fromCurrentRequest()
                 .path("/{id}")
